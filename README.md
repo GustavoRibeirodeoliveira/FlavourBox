@@ -187,16 +187,16 @@ O site se adapta perfeitamente a:
 ## 📸 Screenshots
 
 ### Tela Principal
-![Tela Principal](screenshots/home.png)
+![Tela Principal](Flavourbox.png)
 
 ### Adicionar Receita
-![Modal Nova Receita](screenshots/adicionar.png)
+![Modal Nova Receita](addreceita.png)
 
 ### Visualizar Receita
-![Detalhes](screenshots/detalhes.png)
+![Detalhes](visureceita.png)
 
 ### Favoritos
-![Sidebar Favoritos](screenshots/favoritos.png)
+![Sidebar Favoritos](favoritos.png)
 
 ## 🎯 Destaques do Código
 
