@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FlavourBox</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="assar.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="header">
+    <h1><img src="assar.ico" alt="Ícone FlavourBox" class="icone"><b> FlavourBox</b></h1>
+    <div class="header-actions">
+      <input id="searchInput" class="buscarreceita" type="search" placeholder="Buscar receitas..." />
+      <button id="btnAdd" class="btn">+ Adicionar receita</button>
+    </div>
+  </header>
+  <main class="main">
+    <aside class="sidebar">
+      <h3>🌟Favoritos</h3>
+      <div id="favList" class="fav-list"></div>
+      <button id="btnClearFav" class="btn ghost">Limpar favoritos</button>
+    </aside>
+    <section class="content">
+      <!-- ⭐ CATEGORIAS -->
+      <div class="categories">
+        <button class="cat-btn active" data-cat="all">Todas</button>
+        <button class="cat-btn" data-cat="doce">🍬 Doces</button>
+        <button class="cat-btn" data-cat="salgada">🍖 Salgadas</button>
+      </div>
+      <!-- GRID -->
+      <div id="recipesGrid" class="grid"></div>
+    </section>
+  </main>
+  
+  <!-- MODAL NOVA RECEITA -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-inner">
+      <h2 id="modalTitle">Nova Receita</h2>
+      <form id="recipeForm">
+        <label>Nome
+          <input id="rName" required maxlength="80" />
+        </label>
+        <label>Categoria
+          <select id="rCategory" required>
+            <option value="doce">🍬 Doce</option>
+            <option value="salgada">🍖 Salgada</option>
+          </select>
+        </label>
+        <label>Ingredientes (1 por linha)
+          <textarea id="rIngredients" rows="5" required></textarea>
+        </label>
+        <label>Modo de preparo
+          <textarea id="rSteps" rows="6" required></textarea>
+        </label>
+        <div class="modal-actions">
+          <button type="submit" class="btn primary">Salvar</button>
+          <button type="button" id="btnCancel" class="btn ghost">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <!-- MODAL VISUALIZAÇÃO -->
+  <div id="viewModal" class="modal hidden">
+    <div class="modal-inner">
+      <button id="viewClose" class="close">✕</button>
+      <h2 id="viewName"></h2>
+      <h4>Ingredientes</h4>
+      <ul id="viewIngredients"></ul>
+      <h4>Modo de preparo</h4>
+      <div id="viewSteps" class="pre"></div>
+      <div class="modal-actions">
+        <button id="btnEdit" class="btn">Editar</button>
+        <button id="btnDelete" class="btn ghost">Excluir</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
