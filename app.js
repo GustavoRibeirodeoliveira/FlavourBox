@@ -1,9 +1,7 @@
-// Simple RecipeBox app (no frameworks). Save these 3 files together.
-
+ 
 const STORE_KEY = "rb_recipes_v1";
 
-// Função genId precisa estar ANTES do seed
-function genId() { 
+ function genId() { 
   return Date.now().toString(36) + Math.random().toString(36).slice(2, 8); 
 }
 
@@ -29,7 +27,7 @@ let recipes = loadRecipes();
 let editingId = null;
 let currentCategory = "all";
 
-// init
+ 
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.getElementById("recipesGrid");
   const favList = document.getElementById("favList");
@@ -39,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderAll();
 
-  // events
+  
   search.addEventListener("input", () => renderAll(search.value.trim()));
   btnAdd.addEventListener("click", openModalForCreate);
   btnClearFav.addEventListener("click", () => {
@@ -57,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // modal actions
+   
   document.getElementById("btnCancel").addEventListener("click", closeModal);
   document.getElementById("recipeForm").addEventListener("submit", onSubmitRecipe);
   document.getElementById("viewClose").addEventListener("click", closeView);
@@ -152,7 +150,7 @@ function renderAll(filter = "") {
   renderFavs();
 }
 
-// modal open/close
+ 
 function openModalForCreate() {
   editingId = null;
   document.getElementById("modalTitle").textContent = "Nova Receita";
@@ -167,8 +165,7 @@ function closeModal() {
   document.getElementById("modal").classList.add("hidden"); 
   editingId = null; 
 }
-
-// submit
+ 
 function onSubmitRecipe(e) {
   e.preventDefault();
   
@@ -208,7 +205,7 @@ function onSubmitRecipe(e) {
   renderAll();
 }
 
-// view modal
+ 
 function openView(id) {
   const r = recipes.find(x => x.id === id); 
   if (!r) return;
@@ -251,4 +248,5 @@ function onViewDelete() {
   saveRecipes(); 
   closeView(); 
   renderAll();
+
 }
