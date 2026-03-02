@@ -223,7 +223,7 @@ function toggleFav(id) {
 ```javascript
 recipes.forEach(r => {
   if(category !== "all" && r.category !== category) return;
-  // renderizar card...
+  
 });
 ```
 
