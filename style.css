@@ -1,11 +1,11 @@
 :root{
-  --bg:#FFF4E6;                /* fundo claro */
-  --text:#2b1a00;              /* marrom escuro aconchegante */
+  --bg:#FFF4E6;                
+  --text:#2b1a00;              
   --muted:#5c4636;
-  --card:#FFE2BD;              /* cartão claro */
+  --card:#FFE2BD;               
   --glass: rgba(0,0,0,0.05);
 
-  /* laranjas */
+ 
   --orange:#FFA743;
   --orange-dark:#FF8C00;
 }
@@ -51,8 +51,7 @@ body{
   align-items:flex-start;
 }
 
-/* FAVORITOS (caixa laranja) */
-.sidebar{
+ .sidebar{
   width:240px;
   background:var(--orange);
   padding:16px;
@@ -88,9 +87,8 @@ body{
   cursor:pointer;
   font-size:18px;
 }
-/* ================================
-   MODAL DE VISUALIZAÇÃO - MELHORADO
-   ================================ */
+ 
+   
 
 #viewModal .modal-inner {
   background: linear-gradient(135deg, #fff8e1 0%, #ffe0b2 100%);
@@ -102,7 +100,7 @@ body{
   animation: modalSlideIn 0.3s ease-out;
 }
 
-/* Header da receita */
+ 
 #viewModal .modal-inner h2 {
   background: linear-gradient(135deg, #ff9800 0%, #ff6f00 100%);
   color: white;
@@ -138,7 +136,7 @@ body{
   transform: rotate(90deg);
 }
 
-/* Conteúdo do modal */
+ 
 #viewModal .modal-inner > div {
   padding: 30px;
 }
@@ -261,8 +259,7 @@ body{
     transform: translateY(0) scale(1);
   }
 }
-
-/* Scroll customizado */
+ 
 #viewModal .modal-inner::-webkit-scrollbar {
   width: 8px;
 }
@@ -280,8 +277,7 @@ body{
 #viewModal .modal-inner::-webkit-scrollbar-thumb:hover {
   background: #ff6f00;
 }
-
-/* Responsivo */
+ 
 @media (max-width: 768px) {
   #viewModal .modal-inner {
     max-width: 95%;
@@ -297,12 +293,12 @@ body{
     font-size: 18px;
   }
 }
-/* ÁREA PRINCIPAL */
+ 
 .content{
   flex:1;
 }
 
-/* Cards de receitas — agora laranja */
+ 
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
@@ -356,9 +352,7 @@ body{
   color: #ece8e8;
   
  }
-/* ================================
-   BOTÕES DO MODAL - HOVER EFFECTS
-   ================================ */
+ 
 
 /* Botão Salvar */
 #recipeForm button[type="submit"],
@@ -501,9 +495,7 @@ body{
   .sidebar{width:100%}
   .header input[type="search"]{width:140px}
 }
-/* ------------------------------
-   CATEGORIAS
------------------------------- */
+ 
 .categories{
   display: flex;
   gap: 12px;
@@ -533,7 +525,7 @@ body{
   box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.2);
 }
 
-/* Estilizar as options */
+ 
 #rCategory option {
   padding: 10px;
   font-size: 16px;
@@ -611,4 +603,5 @@ body{
     transform: translateX(400px);
     opacity: 0;
   }
+
 }
